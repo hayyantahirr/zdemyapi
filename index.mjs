@@ -1,5 +1,5 @@
 import express from "express";
-// import router from "./routes/index.js";
+import router from "./routes/index.js";
 import db from "./config/db.js";
 const app = express();
 
@@ -10,8 +10,7 @@ app.listen(4000, () => {
   });
 });
 
-
 //http://localhost:4000/teachers
 //POST
 app.use(express.json()); //backend ko bata rhay hai frontend ka data JSON format mai arha hai
-// app.use("/", router);
+app.use("/", router);
