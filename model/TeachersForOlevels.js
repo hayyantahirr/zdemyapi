@@ -7,11 +7,9 @@ const teachersForOlevelsSchema = new Schema({
   description: String,
   aGrade: Number,
   a: Number,
-  socialLinks: {
-    facebookLink: String,
-    xLink: String,
-    linkedInLink: String,
-  },
+  facebook: String,
+  website: String,
+  instagram: String,
   subjects: [String],
   experience: Number,
   schedule: [
