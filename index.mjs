@@ -3,15 +3,13 @@ import router from "./routes/index.js";
 import db from "./config/db.js";
 import cors from "cors";
 
-
-
 const app = express();
 
 // Configuration for CORS
 const corsOptions = {
   // Add ALL the origins that need to make client-side requests to your API
   origin: "*",
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Allow cookies/authorization headers to be sent
 };
 
@@ -29,7 +27,6 @@ app.listen(4000, () => {
 
 //http://localhost:4000/teachers
 //POST
-
 
 // Explicitly handle OPTIONS requests
 

@@ -13,6 +13,23 @@ const teachersForOlevelsSchema = new Schema({
     linkedInLink: String,
   },
   subjects: [String],
+  experience: Number,
+  schedule: [
+    {
+      day: {
+        type: String, // e.g. "Monday", "Tuesday"
+        required: true,
+      },
+      startTime: {
+        type: String, // e.g. "20:00" (8 PM in 24h format)
+        required: true,
+      },
+      endTime: {
+        type: String, // e.g. "22:00" (10 PM)
+        required: true,
+      },
+    },
+  ],
 });
 
 const TeachersForOlevels = mongoose.model(
