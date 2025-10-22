@@ -8,7 +8,7 @@ const router = express.Router();
 // http://localhost:3002/gallery/updateGallery/:id
 // http://localhost:3002/gallery/deleteGallery/:id
 
-// ✅ GET all teachers
+// ✅ GET all galleries
 router.get("/", async (req, res) => {
   try {
     const data = await Gallery.find();
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// ✅ ADD teacher
+// ✅ ADD gallery
 router.post("/addGallery", async (req, res) => {
   try {
     const data = req.body;
@@ -29,7 +29,7 @@ router.post("/addGallery", async (req, res) => {
   }
 });
 
-// ✅ DELETE teacher
+// ✅ DELETE gallery
 router.delete("/deleteGallery/:id", async (req, res) => {
   try {
     const { id } = req.params;

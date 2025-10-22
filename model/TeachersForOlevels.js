@@ -6,7 +6,7 @@ const teachersForOlevelsSchema = new Schema({
   image: String,
   description: String,
   aGrade: Number,
-  a: Number,
+  aStar: Number,
   facebook: String,
   website: String,
   instagram: String,

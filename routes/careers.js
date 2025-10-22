@@ -8,7 +8,7 @@ const router = express.Router();
 // http://localhost:3002/careers/updateCareers/:id
 // http://localhost:3002/careers/deleteCareers/:id
 
-// ✅ GET all teachers
+// ✅ GET all careers
 router.get("/", async (req, res) => {
   try {
     const data = await Careers.find();
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// ✅ ADD teacher
+// ✅ ADD careers
 router.post("/addCareers", async (req, res) => {
   try {
     const data = req.body;
@@ -29,7 +29,7 @@ router.post("/addCareers", async (req, res) => {
   }
 });
 
-// ✅ DELETE teacher
+// ✅ DELETE careers
 router.delete("/deleteCareers/:id", async (req, res) => {
   try {
     const { id } = req.params;
